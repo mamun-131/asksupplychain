@@ -12,7 +12,7 @@ app = Flask(__name__)
 	
 @app.route('/api', methods=['GET'])
 def home(): 
-    return jsonify({'mrpc' : 'Mamun'}) 
+    return 'mamun' 
 
 
 if __name__ == '__main__':
