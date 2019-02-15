@@ -10,10 +10,10 @@ import os
 app = Flask(__name__)
 
 	
-@app.route('/api', methods=['GET'])
-def home(): 
+@app.route('/')
+def index(): 
     return 'mamun' 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
