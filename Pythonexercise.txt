@@ -1,0 +1,27 @@
+print ('Which Category of Data you want to see for the material code' + context.entities.MaterialCode);
+print ('<html><body><table><tr><th><b>Message</b></th><th><b>Entity</b></th></tr><tr><td>Which Category of Data you want to see for the material code</td><td>' + context.entities.MaterialCode + '</td></tr></table></body></html>');
+Which Category of Data you want to see for the material code {{context.entities.MaterialCode}}
+
+Plant Specific
+Sales Organization
+
+
+MRPC controller name for the material code is {{context.mrpcRESTDataService.response.body.mrpc}}
+
+
+
+
+import pandas as pd
+df = pd.read_csv('sample_mmps_default.csv', header=None)
+df.columns = ['mol1', 'mol2', 'id1', 'id2', 'trans', 'context']
+jsondf = df.to_json( orient='index')
+
+
+>>> df.to_json(orient='table')
+'{"schema": {"fields": [{"name": "index", "type": "string"},
+                        {"name": "col 1", "type": "string"},
+                        {"name": "col 2", "type": "string"}],
+             "primaryKey": "index",
+             "pandas_version": "0.20.0"},
+  "data": [{"index": "row 1", "col 1": "a", "col 2": "b"},
+           {"index": "row 2", "col 1": "c", "col 2": "d"}]}'

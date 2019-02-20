@@ -21,33 +21,18 @@ app = Flask(__name__)
 #dataA = dataA.astype(str)
 #out = dataA.to_json(orient='records')[1:-1].replace('},{', '} {')
 #print (out)
-def mrpcsearch(mat1):
+def datasearch(mat1):
 	df = pd.read_csv("mrpcdata.csv")
-	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
-	dataA = df.loc[df['Material'] == mat1]	
-	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table')
+	dataA = df.loc[df['Material'] == mat1, 'MRPC']	
+	out = dataA.to_json(orient='records')[1:-1].replace('},{', '} {')
 	return out
 	
-@app.route('/mrpc', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def home(): 
     query = request.args['query']
     print(query)
-    return mrpcsearch(int(query))
+    return jsonify({'mrpc' : datasearch(int(query)).replace('"','')}) 
 
-def inventorysearch(mat1):
-	df = pd.read_csv("inventorydata.csv")
-	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
-	dataA = df.loc[df['Material'] == mat1]	
-	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table')
-	return out
-	
-@app.route('/inventory', methods=['GET'])
-def home1(): 
-    query = request.args['query']
-    print(query)
-    return inventorysearch(int(query))
-	
+
 if __name__ == '__main__':
     app.run(debug=True)
