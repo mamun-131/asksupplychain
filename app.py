@@ -26,7 +26,7 @@ def mrpcsearch(mat1):
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table').replace('},{', '} {')
+	out = dataA.to_json(orient='table')
 	return out
 	
 @app.route('/mrpc', methods=['GET'])
@@ -40,7 +40,7 @@ def inventorysearch(mat1):
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table').replace('},{', '} {')
+	out = dataA.to_json(orient='table')
 	return out
 	
 @app.route('/inventory', methods=['GET'])
