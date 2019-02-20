@@ -26,28 +26,28 @@ def mrpcsearch(mat1):
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table')
+	out = dataA.to_json(orient='table').replace('},{', '} {')
 	return out
 	
 @app.route('/mrpc', methods=['GET'])
 def home(): 
     query = request.args['query']
     print(query)
-    return mrpcsearch(int(query))
+    return mrpcsearch(int(query)).replace('"','')
 
 def inventorysearch(mat1):
 	df = pd.read_csv("inventorydata.csv")
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
-	out = dataA.to_json(orient='table')
+	out = dataA.to_json(orient='table').replace('},{', '} {')
 	return out
 	
 @app.route('/inventory', methods=['GET'])
 def home1(): 
     query = request.args['query']
     print(query)
-    return inventorysearch(int(query))
+    return inventorysearch(int(query)).replace('"','')
 	
 if __name__ == '__main__':
     app.run(debug=True)
