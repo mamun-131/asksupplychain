@@ -23,7 +23,7 @@ app = Flask(__name__)
 #print (out)
 def datasearch(mat1):
 	df = pd.read_csv("mrpcdata.csv")
-	dataA = df.loc[df['Material'] == mat1, 'MRPC']	
+	dataA = df.loc[df['Material'] == mat1, 'MRPC_Name']	
 	out = dataA.to_json(orient='records')[1:-1].replace('},{', '} {')
 	return out
 	
