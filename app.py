@@ -33,8 +33,8 @@ def mrpcsearch(mat1):
 @app.route('/mrpc', methods=['GET'])
 def home(): 
     query = request.args['query']
-    print(query)
-    return mrpcsearch(int(query))
+    print(mrpcsearch(int(query)))
+    return mrpcsearch(int(query)).replace('"', '')
 
 def inventorysearch(mat1):
 	df = pd.read_csv("inventorydata.csv")
