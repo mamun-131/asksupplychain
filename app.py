@@ -34,7 +34,7 @@ def mrpcsearch(mat1):
 def home(): 
     query = request.args['query']
     print(mrpcsearch(int(query)))
-    return mrpcsearch(int(query)).replace('"', '')
+    return mrpcsearch(int(query))
 
 def inventorysearch(mat1):
 	df = pd.read_csv("inventorydata.csv")
