@@ -25,7 +25,7 @@ def mrpcsearch(mat1):
 	df = pd.read_csv("mrpcdata.csv")
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
-	out = json.loads(dataA.to_json(orient='records'))
+	out = dataA.to_json(orient='records')
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
 	#out = dataA.to_json(orient='records')
 	return out
@@ -40,7 +40,7 @@ def inventorysearch(mat1):
 	df = pd.read_csv("inventorydata.csv")
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Material'] == mat1]	
-	out = json.loads(dataA.to_json(orient='records'))
+	out = dataA.to_json(orient='records')
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
 	#out = dataA.to_json(orient='records')
 	return out
