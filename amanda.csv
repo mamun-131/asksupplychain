@@ -1,7 +1,11 @@
 ﻿Name,Item,Item2
 Tax,Tax Bill,Tax Balance
-Water,Water Bill,Water Balance
 Tax Bill,Tax Bill Current Year,Tax Bill Last Year
 Tax Balance,Tax Balance Current Year,Tax Balance Last Year
+Tax Bill Current Year,Tax Bill Current Year Attach,Tax Bill Current Year Email
+Tax Bill Current Year Attach,pdf,jpg
+Water,Water Bill,Water Balance
 Water Bill,Water Bill Current Year,Water Bill Last Year
 Water Balance,Water Balance Current Year,Water Balance Last Year
+Water Bill Current Year,Water Bill Current Year Attach,Water Bill Current Year Email
+Water Bill Current Year Attach,pdf,jpg
