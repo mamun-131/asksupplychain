@@ -55,7 +55,7 @@ def amandasearch(mat1):
 	df = pd.read_csv("amanda.csv")
 	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
 	dataA = df.loc[df['Name'] == mat1]	
-	out = dataA.to_json(orient='records')
+	out = dataA.to_json(orient='records').replace('[', '').replace(']', '')
 	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
 	#out = dataA.to_json(orient='records')
 	return out
