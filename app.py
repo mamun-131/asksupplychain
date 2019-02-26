@@ -51,5 +51,20 @@ def home1():
     print(query)
     return inventorysearch(int(query))
 	
+def amandasearch(mat1):
+	df = pd.read_csv("amanda.csv")
+	#dataA = df.loc[df['Material'] == mat1, 'MRPC']	
+	dataA = df.loc[df['Name'] == mat1]	
+	out = dataA.to_json(orient='records')
+	#out = df .to_json(orient='records')[1:-1].replace('},{', '} {')
+	#out = dataA.to_json(orient='records')
+	return out
+	
+@app.route('/amanda', methods=['GET'])
+def home3(): 
+    query = request.args['query']
+    print(query)
+    return amandasearch(int(query))
+	
 if __name__ == '__main__':
     app.run(debug=True)
