@@ -64,7 +64,7 @@ def amandasearch(mat1):
 def home3(): 
     query = request.args['query']
     print(query)
-    return amandasearch(int(query))
+    return amandasearch(query)
 	
 if __name__ == '__main__':
     app.run(debug=True)
