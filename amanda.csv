@@ -6,10 +6,10 @@ Tax Bill CY Attach,pdf,jpg
 Tax Bill LY,Tax Bill LY Attach,Tax Bill LY Email
 Tax Bill LY Attach,pdf,jpg
 Tax Balance,Tax Balance CY,Tax Balance LY
-Tax Balance CY,Tax Balance CY Attach,Tax Balance CY Email
-Tax Balance CY Attach,pdf,jpg
-Tax Balance LY,Tax Balance LY Attach,Tax Balance LY Email
-Tax Balance LY Attach,pdf,jpg
+Tax Balance CY,Tax Bal CY Attach,Tax Bal CY Email
+Tax Bal CY Attach,pdf,jpg
+Tax Balance LY,Tax Bal LY Attach,Tax Bal LY Email
+Tax Bal LY Attach,pdf,jpg
 Water,Water Bill,Water Balance
 Water Bill,Water Bill CY,Water Bill LY
 Water Bill CY,Water Bill CY Attach,Water Bill CY Email
@@ -17,7 +17,7 @@ Water Bill CY Attach,pdf,jpg
 Water Bill LY,Water Bill LY Attach,Water Bill LY Email
 Water Bill LY Attach,pdf,jpg
 Water Balance,Water Balance CY,Water Balance LY
-Water Balance CY,Water Balance CY Attach,Water Balance CY Email
-Water Balance CY Attach,pdf,jpg
-Water Balance LY,Water Balance LY Attach,Water Balance LY Email
-Water Balance LY Attach,pdf,jpg
+Water Balance CY,Water Bal CY Attach,Water Bal CY Email
+Water Bal CY Attach,pdf,jpg
+Water Balance LY,Water Bal LY Attach,Water Bal LY Email
+Water Bal LY Attach,pdf,jpg
