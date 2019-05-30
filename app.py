@@ -61,10 +61,10 @@ def sixncsearch(mat1):
 	return out
 	
 @app.route('/sixnc', methods=['GET'])
-def home1(): 
+def home2(): 
     query = request.args['query']
     print(query)
-    return inventorysearch(int(query))	
+    return sixncsearch(int(query))	
 	
 	
 	
