@@ -49,7 +49,9 @@ def inventorysearch(mat1):
 def home1(): 
     query = request.args['query']
     print(query)
-    return inventorysearch(int(query))
+	resp = flask.Response(inventorysearch(int(query)))
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 	
 def sixncsearch(mat1):
 	df = pd.read_csv("sixncdata.csv")
